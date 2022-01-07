@@ -1,12 +1,20 @@
-
 var calculations = document.getElementById("calculation");
 var result = document.getElementById("result");
 
-     calculations.addEventListener("click",function(){
-      calculations.setAttribute("disabled",true);
-    })
+   
     function edit(elem) {
       result.value = result.value + elem.value;
+    }
+    function calculation(elem){
+      if (result.value.slice(-1) === "+"){
+        return;}
+      else if (result.value.slice(-1) === "-"){
+        return;}
+      else if (result.value.slice(-1) === "*"){
+        return;}
+      else if (result.value.slice(-1) === "/"){
+        return;}
+      else result.value = result.value + elem.value;
     }
     function calc() {
       result.value = new Function("return " + result.value)();
@@ -15,6 +23,7 @@ var result = document.getElementById("result");
     function reset(){
       result.value = ""
     }
+    
     
    
    
