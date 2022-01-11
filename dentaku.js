@@ -3,8 +3,10 @@ var result = document.getElementById("result");
 
    
     function edit(elem) {
-      result.value = result.value + elem.value;
-    }
+     if (result.value === "0"){}
+     else {
+       result.value = result.value + elem.value;}}
+    
     function calculation(elem){
       if (result.value.slice(-1) === "+"){
         return;}
